@@ -110,6 +110,7 @@ main aside {
   position: fixed;
   inset-block: 0;
   inset-inline-end: 0;
+  z-index: 9999;
 }
 main aside .social-media {
   height: 100%;
@@ -147,4 +148,47 @@ footer {
   color: white;
   text-align: center;
   font-weight: 600;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  header.navbar-container {
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+  header.navbar-container .nav-list ul {
+    gap: 0.5rem 1rem;
+    background-color: #2d3e50;
+    padding: 1rem 1.5rem;
+    border-radius: 999px;
+  }
+  header.navbar-container .nav-list li a {
+    padding: 0.5rem;
+    color: white;
+  }
+
+  header.navbar-container .nav-list li a:hover {
+    font-weight: 800;
+    background-color: #2d3e50;
+  }
+
+  main {
+    padding: 1rem 3rem;
+  }
+  main .content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  main .content .content-description .title {
+    font-size: 3rem;
+  }
+  main .content .content-description p {
+    font-size: 1rem;
+  }
+  main .content .content-image {
+    order: -1;
+  }
 }
