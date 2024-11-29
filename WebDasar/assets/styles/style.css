@@ -14,7 +14,8 @@ header {
 
 main {
   padding: 20px;
-  overflow: auto;
+  display: flex;
+  gap: 1.5rem;
 }
 
 h2,
@@ -37,6 +38,12 @@ nav {
   top: 0;
 }
 
+nav ul {
+  padding-inline: 4rem;
+  display: flex;
+  gap: 2rem;
+}
+
 nav a {
   font-size: 18px;
   font-weight: 400;
@@ -49,9 +56,7 @@ nav a:hover {
 }
 
 nav li {
-  display: inline;
   list-style-type: none;
-  margin-right: 20px;
 }
 
 .profile header {
@@ -73,7 +78,6 @@ nav li {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   padding: 20px;
-  margin-top: 20px;
 }
 
 .jumbotron {
@@ -85,20 +89,32 @@ nav li {
 }
 
 #content {
-  float: left;
-  width: 75%;
+  display: flex;
+  flex: 5;
+  flex-flow: column nowrap;
+  gap: 1rem 2rem;
 }
 
 aside {
-  float: right;
-  width: 25%;
-  padding-left: 20px;
+  flex: 1;
 }
 
-@media screen and (max-width: 1000px) {
-  #content,
+@media screen and (max-width: 1200px) {
+  main {
+    flex-flow: column nowrap;
+  }
+
   aside {
-    width: 100%;
-    padding: 0;
+    align-self: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  nav ul {
+    justify-content: center;
+  }
+
+  aside {
+    align-self: stretch;
   }
 }
