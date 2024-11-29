@@ -8,6 +8,10 @@ body {
   padding: 0;
 }
 
+header {
+  display: inline;
+}
+
 main {
   padding: 20px;
   overflow: auto;
@@ -29,6 +33,8 @@ footer {
 nav {
   background-color: #00a2c6;
   padding: 5px;
+  position: sticky;
+  top: 0;
 }
 
 nav a {
