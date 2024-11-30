@@ -161,18 +161,11 @@ footer {
   }
   header.navbar-container .nav-list ul {
     gap: 0.5rem 1rem;
-    background-color: #2d3e50;
     padding: 1rem 1.5rem;
     border-radius: 999px;
   }
   header.navbar-container .nav-list li a {
-    padding: 0.5rem;
-    color: white;
-  }
-
-  header.navbar-container .nav-list li a:hover {
-    font-weight: 800;
-    background-color: #2d3e50;
+    padding: 0.5rem 1rem;
   }
 
   main {
@@ -190,5 +183,8 @@ footer {
   }
   main .content .content-image {
     order: -1;
+  }
+  main .content .content-description p {
+    margin-right: 1rem;
   }
 }
